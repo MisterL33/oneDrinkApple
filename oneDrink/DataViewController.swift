@@ -11,12 +11,17 @@ import UIKit
 class DataViewController: UIViewController {
 
     @IBOutlet weak var dataLabel: UILabel!
+    @IBOutlet weak var backgroundImg: UIImageView!
+    @IBOutlet weak var logButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    
     var dataObject: String = ""
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        logButton.layer.cornerRadius = 25
+        registerButton.layer.cornerRadius = 25
     }
 
     override func viewWillAppear(_ animated: Bool) {

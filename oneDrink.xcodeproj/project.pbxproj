@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2189BD1AB6C9020904557830 /* Pods_oneDrink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37E18A91B1046E88EA6A02E /* Pods_oneDrink.framework */; };
+		2A9156F5809C0E2C26AAC3D8 /* Pods_oneDrinkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB05C7DBC870A00182F787C3 /* Pods_oneDrinkTests.framework */; };
+		B710DDEE54F019463BF952A7 /* Pods_oneDrinkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE4DFACC509642A71DA0AE3 /* Pods_oneDrinkUITests.framework */; };
+		CD033F2B22048ACC003A94CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD033F2A22048ACC003A94CC /* GoogleService-Info.plist */; };
 		CD366EA422047C6200789993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD366EA322047C6200789993 /* AppDelegate.swift */; };
 		CD366EA622047C6200789993 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD366EA522047C6200789993 /* RootViewController.swift */; };
 		CD366EA822047C6200789993 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD366EA722047C6200789993 /* DataViewController.swift */; };
@@ -36,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D6762479B0F89B7D2344DA4 /* Pods-oneDrink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneDrink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oneDrink/Pods-oneDrink.debug.xcconfig"; sourceTree = "<group>"; };
+		1ADE4A90C8B1D20B8BA3F1D6 /* Pods-oneDrinkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneDrinkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-oneDrinkTests/Pods-oneDrinkTests.release.xcconfig"; sourceTree = "<group>"; };
+		2AE4DFACC509642A71DA0AE3 /* Pods_oneDrinkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oneDrinkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		396DF2000C93D1B3542A3BF2 /* Pods-oneDrinkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneDrinkUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-oneDrinkUITests/Pods-oneDrinkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		81478608DB10A6C038E7FF26 /* Pods-oneDrinkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneDrinkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oneDrinkTests/Pods-oneDrinkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B90E514C50AA5041E8404C99 /* Pods-oneDrinkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneDrinkUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oneDrinkUITests/Pods-oneDrinkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB05C7DBC870A00182F787C3 /* Pods_oneDrinkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oneDrinkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD033F2A22048ACC003A94CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CD366EA022047C6200789993 /* oneDrink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oneDrink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD366EA322047C6200789993 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD366EA522047C6200789993 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +63,8 @@
 		CD366EC322047C6700789993 /* oneDrinkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oneDrinkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD366EC722047C6700789993 /* oneDrinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneDrinkUITests.swift; sourceTree = "<group>"; };
 		CD366EC922047C6700789993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFC3E753A6D246552A4BEB01 /* Pods-oneDrink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneDrink.release.xcconfig"; path = "Pods/Target Support Files/Pods-oneDrink/Pods-oneDrink.release.xcconfig"; sourceTree = "<group>"; };
+		E37E18A91B1046E88EA6A02E /* Pods_oneDrink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oneDrink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2189BD1AB6C9020904557830 /* Pods_oneDrink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A9156F5809C0E2C26AAC3D8 /* Pods_oneDrinkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +88,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B710DDEE54F019463BF952A7 /* Pods_oneDrinkUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		410D73DC8AA26B22E0E41AE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E37E18A91B1046E88EA6A02E /* Pods_oneDrink.framework */,
+				CB05C7DBC870A00182F787C3 /* Pods_oneDrinkTests.framework */,
+				2AE4DFACC509642A71DA0AE3 /* Pods_oneDrinkUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D0244487997F487F35DD41C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D6762479B0F89B7D2344DA4 /* Pods-oneDrink.debug.xcconfig */,
+				DFC3E753A6D246552A4BEB01 /* Pods-oneDrink.release.xcconfig */,
+				81478608DB10A6C038E7FF26 /* Pods-oneDrinkTests.debug.xcconfig */,
+				1ADE4A90C8B1D20B8BA3F1D6 /* Pods-oneDrinkTests.release.xcconfig */,
+				B90E514C50AA5041E8404C99 /* Pods-oneDrinkUITests.debug.xcconfig */,
+				396DF2000C93D1B3542A3BF2 /* Pods-oneDrinkUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CD366E9722047C6200789993 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +125,8 @@
 				CD366EBB22047C6700789993 /* oneDrinkTests */,
 				CD366EC622047C6700789993 /* oneDrinkUITests */,
 				CD366EA122047C6200789993 /* Products */,
+				8D0244487997F487F35DD41C /* Pods */,
+				410D73DC8AA26B22E0E41AE5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +149,7 @@
 				CD366EA922047C6200789993 /* ModelController.swift */,
 				CD366EAB22047C6200789993 /* Main.storyboard */,
 				CD366EAE22047C6600789993 /* Assets.xcassets */,
+				CD033F2A22048ACC003A94CC /* GoogleService-Info.plist */,
 				CD366EB022047C6600789993 /* LaunchScreen.storyboard */,
 				CD366EB322047C6600789993 /* Info.plist */,
 			);
@@ -138,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD366ECC22047C6700789993 /* Build configuration list for PBXNativeTarget "oneDrink" */;
 			buildPhases = (
+				18DE15B1B2D802A534955E08 /* [CP] Check Pods Manifest.lock */,
 				CD366E9C22047C6200789993 /* Sources */,
 				CD366E9D22047C6200789993 /* Frameworks */,
 				CD366E9E22047C6200789993 /* Resources */,
+				E26FEBEF7B98B0ACB27F076A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +200,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD366ECF22047C6700789993 /* Build configuration list for PBXNativeTarget "oneDrinkTests" */;
 			buildPhases = (
+				FC986D1E52B21AD88262504A /* [CP] Check Pods Manifest.lock */,
 				CD366EB422047C6700789993 /* Sources */,
 				CD366EB522047C6700789993 /* Frameworks */,
 				CD366EB622047C6700789993 /* Resources */,
@@ -173,6 +219,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD366ED222047C6700789993 /* Build configuration list for PBXNativeTarget "oneDrinkUITests" */;
 			buildPhases = (
+				8F0F6A5B77C87091AF57FEC5 /* [CP] Check Pods Manifest.lock */,
 				CD366EBF22047C6700789993 /* Sources */,
 				CD366EC022047C6700789993 /* Frameworks */,
 				CD366EC122047C6700789993 /* Resources */,
@@ -236,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD366EB222047C6600789993 /* LaunchScreen.storyboard in Resources */,
+				CD033F2B22048ACC003A94CC /* GoogleService-Info.plist in Resources */,
 				CD366EAF22047C6600789993 /* Assets.xcassets in Resources */,
 				CD366EAD22047C6200789993 /* Main.storyboard in Resources */,
 			);
@@ -256,6 +304,103 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18DE15B1B2D802A534955E08 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-oneDrink-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F0F6A5B77C87091AF57FEC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-oneDrinkUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E26FEBEF7B98B0ACB27F076A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-oneDrink/Pods-oneDrink-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-oneDrink/Pods-oneDrink-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC986D1E52B21AD88262504A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-oneDrinkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD366E9C22047C6200789993 /* Sources */ = {
@@ -438,6 +583,7 @@
 		};
 		CD366ECD22047C6700789993 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D6762479B0F89B7D2344DA4 /* Pods-oneDrink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -455,6 +601,7 @@
 		};
 		CD366ECE22047C6700789993 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFC3E753A6D246552A4BEB01 /* Pods-oneDrink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -472,6 +619,7 @@
 		};
 		CD366ED022047C6700789993 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81478608DB10A6C038E7FF26 /* Pods-oneDrinkTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +640,7 @@
 		};
 		CD366ED122047C6700789993 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ADE4A90C8B1D20B8BA3F1D6 /* Pods-oneDrinkTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +661,7 @@
 		};
 		CD366ED322047C6700789993 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B90E514C50AA5041E8404C99 /* Pods-oneDrinkUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -531,6 +681,7 @@
 		};
 		CD366ED422047C6700789993 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 396DF2000C93D1B3542A3BF2 /* Pods-oneDrinkUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

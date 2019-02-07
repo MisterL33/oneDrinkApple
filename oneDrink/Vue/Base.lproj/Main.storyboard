@@ -94,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="2442.0289855072465" y="-243.75000000000003"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="8fO-vR-8qt">
             <objects>
-                <viewController id="Pi0-Vz-EnB" sceneMemberID="viewController">
+                <viewController id="Pi0-Vz-EnB" customClass="RegisterViewController" customModule="oneDrink" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mHm-Cg-aTx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,6 +127,9 @@
                                 <rect key="frame" x="152" y="332" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="s'inscrire"/>
+                                <connections>
+                                    <action selector="createAccountAction:" destination="Pi0-Vz-EnB" eventType="touchUpInside" id="4WZ-Pq-VHE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCH-IA-auh">
                                 <rect key="frame" x="149" y="617" width="77" height="30"/>
@@ -137,10 +140,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3W2-Gt-Xeb"/>
                     </view>
+                    <connections>
+                        <outlet property="loginTextField" destination="NHF-Fc-7PT" id="tyn-dB-aww"/>
+                        <outlet property="passwordTextField" destination="9ef-er-mbo" id="2Kj-ID-fA9"/>
+                        <segue destination="nfs-YY-UpU" kind="show" identifier="registerGoHome" id="s0l-gV-WKP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZ6-RU-CgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3547.826086956522" y="338.31521739130437"/>
+            <point key="canvasLocation" x="3548" y="281"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mo1-SD-UJ1">
@@ -213,6 +221,8 @@
                     </view>
                     <connections>
                         <outlet property="loginConfirmButton" destination="wNG-Wx-UMH" id="dui-pm-RYg"/>
+                        <outlet property="loginTextField" destination="ek8-aV-WoO" id="5Cw-AF-mpa"/>
+                        <outlet property="passwordTextField" destination="1Fs-mG-zq9" id="yYE-Ei-sx3"/>
                         <segue destination="nfs-YY-UpU" kind="show" identifier="homeSegue" id="9XA-RS-ZNb"/>
                     </connections>
                 </viewController>
@@ -279,4 +289,7 @@
         <image name="fond" width="2054" height="2131"/>
         <image name="onedrink" width="732" height="732.239990234375"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="s0l-gV-WKP"/>
+    </inferredMetricsTieBreakers>
 </document>

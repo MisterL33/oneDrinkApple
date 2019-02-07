@@ -11,6 +11,8 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginConfirmButton: UIButton!
+    @IBOutlet weak var loginTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +20,8 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func loginButtonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "homeSegue", sender: self)
+        
+        //self.performSegue(withIdentifier: "homeSegue", sender: self)
     }
     
 }

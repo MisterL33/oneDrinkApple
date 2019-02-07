@@ -21,6 +21,7 @@
 		CD366EBD22047C6700789993 /* oneDrinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD366EBC22047C6700789993 /* oneDrinkTests.swift */; };
 		CD366EC822047C6700789993 /* oneDrinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD366EC722047C6700789993 /* oneDrinkUITests.swift */; };
 		CD69BD86220C2F7800A3205C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD69BD85220C2F7800A3205C /* LoginViewController.swift */; };
+		CD69BD88220C341700A3205C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD69BD87220C341700A3205C /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		CD366EC722047C6700789993 /* oneDrinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneDrinkUITests.swift; sourceTree = "<group>"; };
 		CD366EC922047C6700789993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD69BD85220C2F7800A3205C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CD69BD87220C341700A3205C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DFC3E753A6D246552A4BEB01 /* Pods-oneDrink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneDrink.release.xcconfig"; path = "Pods/Target Support Files/Pods-oneDrink/Pods-oneDrink.release.xcconfig"; sourceTree = "<group>"; };
 		E37E18A91B1046E88EA6A02E /* Pods_oneDrink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oneDrink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -197,6 +199,7 @@
 				CD366EA722047C6200789993 /* DataViewController.swift */,
 				CD366EA922047C6200789993 /* ModelController.swift */,
 				CD69BD85220C2F7800A3205C /* LoginViewController.swift */,
+				CD69BD87220C341700A3205C /* RegisterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				CD366EA622047C6200789993 /* RootViewController.swift in Sources */,
 				CD366EAA22047C6200789993 /* ModelController.swift in Sources */,
 				CD366EA822047C6200789993 /* DataViewController.swift in Sources */,
+				CD69BD88220C341700A3205C /* RegisterViewController.swift in Sources */,
 				CD69BD86220C2F7800A3205C /* LoginViewController.swift in Sources */,
 				CD366EA422047C6200789993 /* AppDelegate.swift in Sources */,
 			);

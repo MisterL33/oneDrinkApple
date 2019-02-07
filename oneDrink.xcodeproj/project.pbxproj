@@ -20,6 +20,7 @@
 		CD366EB222047C6600789993 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD366EB022047C6600789993 /* LaunchScreen.storyboard */; };
 		CD366EBD22047C6700789993 /* oneDrinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD366EBC22047C6700789993 /* oneDrinkTests.swift */; };
 		CD366EC822047C6700789993 /* oneDrinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD366EC722047C6700789993 /* oneDrinkUITests.swift */; };
+		CD69BD86220C2F7800A3205C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD69BD85220C2F7800A3205C /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		CD366EC322047C6700789993 /* oneDrinkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oneDrinkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD366EC722047C6700789993 /* oneDrinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneDrinkUITests.swift; sourceTree = "<group>"; };
 		CD366EC922047C6700789993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD69BD85220C2F7800A3205C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DFC3E753A6D246552A4BEB01 /* Pods-oneDrink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneDrink.release.xcconfig"; path = "Pods/Target Support Files/Pods-oneDrink/Pods-oneDrink.release.xcconfig"; sourceTree = "<group>"; };
 		E37E18A91B1046E88EA6A02E /* Pods_oneDrink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oneDrink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,11 +145,9 @@
 		CD366EA222047C6200789993 /* oneDrink */ = {
 			isa = PBXGroup;
 			children = (
-				CD366EA322047C6200789993 /* AppDelegate.swift */,
-				CD366EA522047C6200789993 /* RootViewController.swift */,
-				CD366EA722047C6200789993 /* DataViewController.swift */,
-				CD366EA922047C6200789993 /* ModelController.swift */,
-				CD366EAB22047C6200789993 /* Main.storyboard */,
+				CD69BD84220C2ECF00A3205C /* Controller */,
+				CD69BD83220C2EC500A3205C /* Vue */,
+				CD69BD82220C2EBB00A3205C /* Model */,
 				CD366EAE22047C6600789993 /* Assets.xcassets */,
 				CD033F2A22048ACC003A94CC /* GoogleService-Info.plist */,
 				CD366EB022047C6600789993 /* LaunchScreen.storyboard */,
@@ -172,6 +172,33 @@
 				CD366EC922047C6700789993 /* Info.plist */,
 			);
 			path = oneDrinkUITests;
+			sourceTree = "<group>";
+		};
+		CD69BD82220C2EBB00A3205C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD69BD83220C2EC500A3205C /* Vue */ = {
+			isa = PBXGroup;
+			children = (
+				CD366EAB22047C6200789993 /* Main.storyboard */,
+			);
+			path = Vue;
+			sourceTree = "<group>";
+		};
+		CD69BD84220C2ECF00A3205C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CD366EA522047C6200789993 /* RootViewController.swift */,
+				CD366EA322047C6200789993 /* AppDelegate.swift */,
+				CD366EA722047C6200789993 /* DataViewController.swift */,
+				CD366EA922047C6200789993 /* ModelController.swift */,
+				CD69BD85220C2F7800A3205C /* LoginViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,6 +437,7 @@
 				CD366EA622047C6200789993 /* RootViewController.swift in Sources */,
 				CD366EAA22047C6200789993 /* ModelController.swift in Sources */,
 				CD366EA822047C6200789993 /* DataViewController.swift in Sources */,
+				CD69BD86220C2F7800A3205C /* LoginViewController.swift in Sources */,
 				CD366EA422047C6200789993 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

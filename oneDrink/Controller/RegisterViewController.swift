@@ -22,14 +22,16 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func createAccountAction(_ sender: AnyObject) {
-        
+        let ref = Database.database().reference().root
         Auth.auth().createUser(withEmail: loginTextField.text!, password: passwordTextField.text!) { (user, error) in
             if let error = error {
                 print(error)
+               
             } else {
                 print("register success")
-                self.performSegue(withIdentifier: "registerGoHome", sender: self)
+                ref.child("users").child((user?.user.uid)!).setValue(["email": user?.user.email])
             }
+            
             
         }
     }

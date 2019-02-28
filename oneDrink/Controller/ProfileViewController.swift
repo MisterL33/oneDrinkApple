@@ -55,11 +55,29 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
            firstNameInput.text != "" &&
            ageInput.text != "" &&
            favoriteAlcoholInput.text != ""{
+        
+            let image = imageView.image
+           
+            let picture = image!.pngData()
             
-//                self.user = User(picture: <#Data?#>, age: <#Int#>, gender: <#String#>, firstname: <#String#>, lastname: <#String#>, description: <#String#>, favoriteAlcohol: <#String#>)
+            let age = Int(ageInput.text ?? "18")
+            
+            var gender = ""
+            if !genderSwitch.isOn{
+                gender = "male"
+            }else{
+                gender = "female"
+            }
+            let firstName = firstNameInput.text
+            let lastName = lastNameInput.text
+            let description = descriptionArea.text
+            let favoriteAlcohol = favoriteAlcoholInput.text
+            self.user = User(picture: picture, age: age!, gender: gender, firstname: firstName!, lastname: lastName!, description: description!, favoriteAlcohol: favoriteAlcohol!)
+            print(user)
+            //stocker en bdd
             
         } else{
-            
+            print("certain champs sont vide")
         }
     }
     

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2189BD1AB6C9020904557830 /* Pods_oneDrink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37E18A91B1046E88EA6A02E /* Pods_oneDrink.framework */; };
 		2A9156F5809C0E2C26AAC3D8 /* Pods_oneDrinkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB05C7DBC870A00182F787C3 /* Pods_oneDrinkTests.framework */; };
+		8B0A2EC22227F89600FA61EA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A2EC12227F89600FA61EA /* ProfileViewController.swift */; };
+		8B0A2EC42227F8F700FA61EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A2EC32227F8F700FA61EA /* User.swift */; };
 		8B111163220C7FC100E8FFDB /* RescueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B111162220C7FC100E8FFDB /* RescueViewController.swift */; };
 		B710DDEE54F019463BF952A7 /* Pods_oneDrinkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE4DFACC509642A71DA0AE3 /* Pods_oneDrinkUITests.framework */; };
 		CD033F2B22048ACC003A94CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD033F2A22048ACC003A94CC /* GoogleService-Info.plist */; };
@@ -48,6 +50,8 @@
 		2AE4DFACC509642A71DA0AE3 /* Pods_oneDrinkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oneDrinkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		396DF2000C93D1B3542A3BF2 /* Pods-oneDrinkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneDrinkUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-oneDrinkUITests/Pods-oneDrinkUITests.release.xcconfig"; sourceTree = "<group>"; };
 		81478608DB10A6C038E7FF26 /* Pods-oneDrinkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneDrinkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oneDrinkTests/Pods-oneDrinkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B0A2EC12227F89600FA61EA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8B0A2EC32227F8F700FA61EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = oneDrink/Controller/User.swift; sourceTree = SOURCE_ROOT; };
 		8B111162220C7FC100E8FFDB /* RescueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RescueViewController.swift; sourceTree = "<group>"; };
 		B90E514C50AA5041E8404C99 /* Pods-oneDrinkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneDrinkUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oneDrinkUITests/Pods-oneDrinkUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB05C7DBC870A00182F787C3 /* Pods_oneDrinkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oneDrinkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +185,7 @@
 		CD69BD82220C2EBB00A3205C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8B0A2EC32227F8F700FA61EA /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 				CD69BD85220C2F7800A3205C /* LoginViewController.swift */,
 				CD69BD87220C341700A3205C /* RegisterViewController.swift */,
 				8B111162220C7FC100E8FFDB /* RescueViewController.swift */,
+				8B0A2EC12227F89600FA61EA /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -445,7 +451,9 @@
 				CD366EA822047C6200789993 /* DataViewController.swift in Sources */,
 				CD69BD88220C341700A3205C /* RegisterViewController.swift in Sources */,
 				CD69BD86220C2F7800A3205C /* LoginViewController.swift in Sources */,
+				8B0A2EC42227F8F700FA61EA /* User.swift in Sources */,
 				8B111163220C7FC100E8FFDB /* RescueViewController.swift in Sources */,
+				8B0A2EC22227F89600FA61EA /* ProfileViewController.swift in Sources */,
 				CD366EA422047C6200789993 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

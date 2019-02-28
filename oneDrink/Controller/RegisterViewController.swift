@@ -28,7 +28,7 @@ class RegisterViewController: UIViewController {
                 print(error)
             } else {
                 print("register success")
-                self.performSegue(withIdentifier: "registerGoHome", sender: self)
+                self.performSegue(withIdentifier: "registerGoProfile", sender: self)
             }
             
         }

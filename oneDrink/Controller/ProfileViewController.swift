@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import Alamofire
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -51,6 +53,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     @IBAction func saveClick(_ sender: UIButton) {
+        let ref = Database.database().reference().root
         if lastNameInput.text != "" &&
            firstNameInput.text != "" &&
            ageInput.text != "" &&
@@ -73,13 +76,28 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             let description = descriptionArea.text
             let favoriteAlcohol = favoriteAlcoholInput.text
             self.user = User(picture: picture, age: age!, gender: gender, firstname: firstName!, lastname: lastName!, description: description!, favoriteAlcohol: favoriteAlcohol!)
-            print(user)
-            //stocker en bdd
+            
+            
+
+    
+            let base64String = picture?.base64EncodedString(options: .lineLength64Characters)
+            let url = "https://api.imgur.com/3/upload"
+            
+
+            
+            
+            let userFromFirebase = Auth.auth().currentUser
+            
+            
+            ref.child("users").child((userFromFirebase?.uid)!).setValue([["age": user?.age], ["gender": user?.gender], ["firstname": user?.firstname], ["lastname": user?.lastname], ["description": user?.description], ["favoriteAlcohol": user?.favoriteAlcohol], ["picture":base64String]])
+
             
         } else{
             print("certain champs sont vide")
         }
     }
+    
+
     
 
     /*

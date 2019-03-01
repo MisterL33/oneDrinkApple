@@ -30,7 +30,7 @@ class RegisterViewController: UIViewController {
             } else {
                 print("register success")
                 ref.child("users").child((user?.user.uid)!).setValue(["email": user?.user.email])
-                self.performSegue(withIdentifier: "registerGoProfile", sender: self)
+                    self.performSegue(withIdentifier: "registerGoProfile", sender: self)
             }
             
             

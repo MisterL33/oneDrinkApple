@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
@@ -22,6 +23,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     @IBOutlet weak var urlInput: UILabel!
+
     
     var user : User?
     var imagePicker = UIImagePickerController()
@@ -49,7 +51,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             let localPath = documentDirectory?.appending(imgName)
             
             let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-            let data = image.pngData()! as NSData
+            let data = image.jpegData(compressionQuality: 0.3) as! NSData
             data.write(toFile: localPath!, atomically: true)
             
             photoUrl = URL.init(fileURLWithPath: localPath!)
@@ -92,22 +94,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             let favoriteAlcohol = favoriteAlcoholInput.text
             self.user = User(picture: picture, age: age!, gender: gender, firstname: firstName!, lastname: lastName!, description: description!, favoriteAlcohol: favoriteAlcohol!)
             
-            let userImagesRef = storageRef.child("user/profil.png");
+            let userImagesRef = storageRef.child("userse/profil2.jpeg");
             var downloadURL : URL!
             let base64String = picture?.base64EncodedString(options: .lineLength64Characters)
-            let uploadTask = userImagesRef.putFile(from: photoUrl, metadata: nil) { metadata, error in
-                
-                storageRef.downloadURL(completion: { (url, error) in
-                    if error != nil {
-                        print("Failed to download url:", error!)
-                        return
-                    } else {
-                        print(url)
-                    }
-                    
-                })
-            
-            }
+            userImagesRef.putFile(from: photoUrl, metadata: nil)
 
             let userFromFirebase = Auth.auth().currentUser
             print(downloadURL)

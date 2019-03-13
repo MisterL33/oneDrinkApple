@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import Alamofire
+
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -18,11 +18,16 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var firstNameInput: UITextField!
     @IBOutlet weak var genderSwitch: UISwitch!
     @IBOutlet weak var ageInput: UITextField!
-    @IBOutlet weak var descriptionArea: UITextView!
     @IBOutlet weak var favoriteAlcoholInput: UITextField!
+    @IBOutlet weak var descriptionArea: UITextField!
+    
+    
+    @IBOutlet weak var urlInput: UILabel!
+
     
     var user : User?
     var imagePicker = UIImagePickerController()
+    var photoUrl : URL!
     
     @IBAction func chooseClicked(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
@@ -38,9 +43,21 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else  { return }
         imageView.image = image
+        if let imgUrl = info[UIImagePickerController.InfoKey.imageURL] as? URL{
+            let imgName = imgUrl.lastPathComponent
+            let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
+            let localPath = documentDirectory?.appending(imgName)
+            
+            let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+            let data = image.jpegData(compressionQuality: 0.3) as! NSData
+            data.write(toFile: localPath!, atomically: true)
+            
+            photoUrl = URL.init(fileURLWithPath: localPath!)
+            
+            
+        }
         dismiss(animated: true, completion: nil)
         
     }
@@ -54,17 +71,17 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func saveClick(_ sender: UIButton) {
         let ref = Database.database().reference().root
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let imagesRef = storageRef.child("images");
         if lastNameInput.text != "" &&
            firstNameInput.text != "" &&
            ageInput.text != "" &&
            favoriteAlcoholInput.text != ""{
         
             let image = imageView.image
-           
             let picture = image!.pngData()
-            
             let age = Int(ageInput.text ?? "18")
-            
             var gender = ""
             if !genderSwitch.isOn{
                 gender = "male"
@@ -77,19 +94,17 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             let favoriteAlcohol = favoriteAlcoholInput.text
             self.user = User(picture: picture, age: age!, gender: gender, firstname: firstName!, lastname: lastName!, description: description!, favoriteAlcohol: favoriteAlcohol!)
             
-            
-
-    
+            let userImagesRef = storageRef.child("userse/profil2.jpeg");
+            var downloadURL : URL!
             let base64String = picture?.base64EncodedString(options: .lineLength64Characters)
-            let url = "https://api.imgur.com/3/upload"
-            
+            userImagesRef.putFile(from: photoUrl, metadata: nil)
 
-            
-            
             let userFromFirebase = Auth.auth().currentUser
+            print(downloadURL)
+            
+            ref.child("users").child((userFromFirebase?.uid)!).setValue(["age": user?.age, "gender": user?.gender, "firstname": user?.firstname, "lastname": user?.lastname, "description": user?.description, "favoriteAlcohol": user?.favoriteAlcohol, "imageURL": downloadURL])
             
             
-            ref.child("users").child((userFromFirebase?.uid)!).setValue([["age": user?.age], ["gender": user?.gender], ["firstname": user?.firstname], ["lastname": user?.lastname], ["description": user?.description], ["favoriteAlcohol": user?.favoriteAlcohol], ["picture":base64String]])
 
             
         } else{

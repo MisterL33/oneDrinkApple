@@ -25,6 +25,9 @@
 		CD366EC822047C6700789993 /* oneDrinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD366EC722047C6700789993 /* oneDrinkUITests.swift */; };
 		CD69BD86220C2F7800A3205C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD69BD85220C2F7800A3205C /* LoginViewController.swift */; };
 		CD69BD88220C341700A3205C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD69BD87220C341700A3205C /* RegisterViewController.swift */; };
+		CDED47A82236E31600D9EE34 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDED47A72236E31600D9EE34 /* HomeViewController.swift */; };
+		CDED47AA2236E49900D9EE34 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDED47A92236E49900D9EE34 /* RoomViewController.swift */; };
+		CDED47B02236E7D900D9EE34 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDED47AF2236E7D900D9EE34 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		CD366EC922047C6700789993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD69BD85220C2F7800A3205C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CD69BD87220C341700A3205C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CDED47A72236E31600D9EE34 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CDED47A92236E49900D9EE34 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		CDED47AF2236E7D900D9EE34 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		DFC3E753A6D246552A4BEB01 /* Pods-oneDrink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneDrink.release.xcconfig"; path = "Pods/Target Support Files/Pods-oneDrink/Pods-oneDrink.release.xcconfig"; sourceTree = "<group>"; };
 		E37E18A91B1046E88EA6A02E /* Pods_oneDrink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oneDrink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -209,6 +215,9 @@
 				CD69BD87220C341700A3205C /* RegisterViewController.swift */,
 				8B111162220C7FC100E8FFDB /* RescueViewController.swift */,
 				8B0A2EC12227F89600FA61EA /* ProfileViewController.swift */,
+				CDED47A72236E31600D9EE34 /* HomeViewController.swift */,
+				CDED47A92236E49900D9EE34 /* RoomViewController.swift */,
+				CDED47AF2236E7D900D9EE34 /* CollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -398,7 +407,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-oneDrink/Pods-oneDrink-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -408,7 +416,6 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -450,9 +457,12 @@
 			files = (
 				CD366EA622047C6200789993 /* RootViewController.swift in Sources */,
 				CD366EAA22047C6200789993 /* ModelController.swift in Sources */,
+				CDED47B02236E7D900D9EE34 /* CollectionViewCell.swift in Sources */,
 				CD366EA822047C6200789993 /* DataViewController.swift in Sources */,
 				CD69BD88220C341700A3205C /* RegisterViewController.swift in Sources */,
 				CD69BD86220C2F7800A3205C /* LoginViewController.swift in Sources */,
+				CDED47A82236E31600D9EE34 /* HomeViewController.swift in Sources */,
+				CDED47AA2236E49900D9EE34 /* RoomViewController.swift in Sources */,
 				8B0A2EC42227F8F700FA61EA /* User.swift in Sources */,
 				8B111163220C7FC100E8FFDB /* RescueViewController.swift in Sources */,
 				8B0A2EC22227F89600FA61EA /* ProfileViewController.swift in Sources */,

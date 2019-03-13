@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import Alamofire
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

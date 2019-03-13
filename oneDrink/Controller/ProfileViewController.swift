@@ -95,14 +95,24 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             self.user = User(picture: picture, age: age!, gender: gender, firstname: firstName!, lastname: lastName!, description: description!, favoriteAlcohol: favoriteAlcohol!)
             
             let userImagesRef = storageRef.child("userse/profil2.jpeg");
-            var downloadURL : URL!
             let base64String = picture?.base64EncodedString(options: .lineLength64Characters)
-            userImagesRef.putFile(from: photoUrl, metadata: nil)
-
+            var strURL = ""
             let userFromFirebase = Auth.auth().currentUser
-            print(downloadURL)
+            userImagesRef.putFile(from: photoUrl, metadata: nil, completion: {(metadata, error) in
+                
+                userImagesRef.downloadURL(completion: { (url, error) in
+                    if let urlText = url?.absoluteString {
+                        
+                        strURL = urlText
+                        ref.child("users").child((userFromFirebase?.uid)!).setValue(["age": self.user?.age, "gender": self.user?.gender, "firstname": self.user?.firstname, "lastname": self.user?.lastname, "description": self.user?.description, "favoriteAlcohol": self.user?.favoriteAlcohol, "imageURL": strURL])
+                    }
+                })
+            })
             
-            ref.child("users").child((userFromFirebase?.uid)!).setValue(["age": user?.age, "gender": user?.gender, "firstname": user?.firstname, "lastname": user?.lastname, "description": user?.description, "favoriteAlcohol": user?.favoriteAlcohol, "imageURL": downloadURL])
+            
+
+            
+            
             
             
 

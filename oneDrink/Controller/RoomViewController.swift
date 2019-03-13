@@ -20,8 +20,12 @@ class RoomViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
         
+        let url = URL(string: "https://www.wikichat.fr/wp-content/uploads/sites/2/comment-soigner-une-plaie-dun-chat.jpg")
+        let dataImage = try? Data(contentsOf: url!)
+        
         cell.userName.text = "romain"
         cell.userAlcohol.text = "Rhum"
+        cell.profileImage.image = UIImage(data: dataImage!)
         return cell;
     }
     

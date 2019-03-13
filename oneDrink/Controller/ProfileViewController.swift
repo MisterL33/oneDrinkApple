@@ -43,15 +43,18 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else  { return }
         imageView.image = image
+        
         if let imgUrl = info[UIImagePickerController.InfoKey.imageURL] as? URL{
+            
             let imgName = imgUrl.lastPathComponent
             let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
             let localPath = documentDirectory?.appending(imgName)
-            
             let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
             let data = image.jpegData(compressionQuality: 0.3) as! NSData
+            
             data.write(toFile: localPath!, atomically: true)
             
             photoUrl = URL.init(fileURLWithPath: localPath!)
@@ -64,16 +67,15 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     
     @IBAction func saveClick(_ sender: UIButton) {
+        
         let ref = Database.database().reference().root
         let storage = Storage.storage()
         let storageRef = storage.reference()
-        let imagesRef = storageRef.child("images");
+        
         if lastNameInput.text != "" &&
            firstNameInput.text != "" &&
            ageInput.text != "" &&
@@ -92,12 +94,16 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             let lastName = lastNameInput.text
             let description = descriptionArea.text
             let favoriteAlcohol = favoriteAlcoholInput.text
+            
             self.user = User(picture: picture, age: age!, gender: gender, firstname: firstName!, lastname: lastName!, description: description!, favoriteAlcohol: favoriteAlcohol!)
             
-            let userImagesRef = storageRef.child("userse/profil2.jpeg");
-            let base64String = picture?.base64EncodedString(options: .lineLength64Characters)
+            let userImagesRef = storageRef.child("users/" + firstName! + "-" + lastName! + ".jpeg");
+            
             var strURL = ""
+            
             let userFromFirebase = Auth.auth().currentUser
+            
+            
             userImagesRef.putFile(from: photoUrl, metadata: nil, completion: {(metadata, error) in
                 
                 userImagesRef.downloadURL(completion: { (url, error) in
@@ -108,15 +114,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                     }
                 })
             })
-            
-            
 
-            
-            
-            
-            
-
-            
         } else{
             print("certain champs sont vide")
         }

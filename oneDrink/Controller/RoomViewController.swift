@@ -20,7 +20,8 @@ class RoomViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
         
-      cell.displayContent(name: "Laurent", alcohol: "Vodka")
+        cell.userName.text = "romain"
+        cell.userAlcohol.text = "Rhum"
         return cell;
     }
     
@@ -31,15 +32,5 @@ class RoomViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

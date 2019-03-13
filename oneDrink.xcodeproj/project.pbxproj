@@ -207,6 +207,7 @@
 		CD69BD84220C2ECF00A3205C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FE1AF056223987B400DB3884 /* customElement */,
 				CD366EA522047C6200789993 /* RootViewController.swift */,
 				CD366EA322047C6200789993 /* AppDelegate.swift */,
 				CD366EA722047C6200789993 /* DataViewController.swift */,
@@ -217,9 +218,16 @@
 				8B0A2EC12227F89600FA61EA /* ProfileViewController.swift */,
 				CDED47A72236E31600D9EE34 /* HomeViewController.swift */,
 				CDED47A92236E49900D9EE34 /* RoomViewController.swift */,
-				CDED47AF2236E7D900D9EE34 /* CollectionViewCell.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE1AF056223987B400DB3884 /* customElement */ = {
+			isa = PBXGroup;
+			children = (
+				CDED47AF2236E7D900D9EE34 /* CollectionViewCell.swift */,
+			);
+			path = customElement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -642,7 +650,9 @@
 			baseConfigurationReference = 0D6762479B0F89B7D2344DA4 /* Pods-oneDrink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = oneDrink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -650,6 +660,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = code.oneDrink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -660,7 +671,9 @@
 			baseConfigurationReference = DFC3E753A6D246552A4BEB01 /* Pods-oneDrink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = oneDrink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -668,6 +681,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = code.oneDrink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

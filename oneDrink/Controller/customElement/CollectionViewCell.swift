@@ -13,9 +13,8 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var userAlcohol: UILabel!
     @IBOutlet weak var userName: UILabel!
     
-    func displayContent(name: String, alcohol: String){
-        userName.text = name
-        userAlcohol.text = alcohol
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
-    
 }

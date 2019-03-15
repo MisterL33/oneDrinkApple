@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class DataViewController: UIViewController {
 
@@ -18,6 +19,11 @@ class DataViewController: UIViewController {
     var dataObject: String = ""
 
 
+    @IBAction func registerPressed(_ sender: Any) {
+        
+        let ref = Database.database().reference().root
+        try! Auth.auth().signOut()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         logButton.layer.cornerRadius = 25

@@ -11,7 +11,7 @@ import Firebase
 
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var chooseButton: UIButton!
     @IBOutlet weak var lastNameInput: UITextField!
@@ -23,11 +23,48 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     @IBOutlet weak var urlInput: UILabel!
-
+    
     
     var user : User?
     var imagePicker = UIImagePickerController()
     var photoUrl : URL!
+    let ref = Database.database().reference().root
+    let storageRef = Storage.storage().reference()
+    let firebaseUser = Auth.auth().currentUser
+    var photoChanging = false;
+    
+    override func viewWillAppear(_ animated: Bool) {
+
+        print("will appear")
+        if firebaseUser != nil {
+
+            ref.child("users").child(firebaseUser!.uid).observe(.value, with: { snapshot in
+                if(snapshot.hasChild("lastname")){
+                let value = snapshot.value as! NSDictionary
+                let age:String = String(format: "%@", value["age"] as! CVarArg)
+                self.favoriteAlcoholInput.text = value["favoriteAlcohol"] as? String ?? ""
+                self.ageInput.text = age
+                self.descriptionArea.text = value["description"] as? String ?? ""
+                self.firstNameInput.text = value["firstname"] as? String ?? ""
+                self.lastNameInput.text = value["lastname"] as? String ?? ""
+                
+                let genreFirebase = value["gender"] as? String ?? ""
+                
+                if(genreFirebase == "female"){
+                    self.genderSwitch.setOn(true, animated: true)
+                }
+                    if(self.photoChanging == false){
+                        self.photoUrl = URL(string: value["imageURL"] as? String ?? "")
+                        let dataImage = try? Data(contentsOf: self.photoUrl!)
+                        self.imageView.image = UIImage(data: dataImage!)
+                    }
+                
+                }
+                
+            })
+        }
+    }
+        
     
     @IBAction func chooseClicked(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
@@ -38,9 +75,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             imagePicker.allowsEditing = false
             
             self.present(imagePicker, animated: true, completion: nil)
+            
         }
     }
-
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
@@ -56,7 +94,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             let data = image.jpegData(compressionQuality: 0.3) as! NSData
             
             data.write(toFile: localPath!, atomically: true)
-            
+            photoChanging = true
             photoUrl = URL.init(fileURLWithPath: localPath!)
             
             
@@ -72,15 +110,13 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func saveClick(_ sender: UIButton) {
         
-        let ref = Database.database().reference().root
-        let storage = Storage.storage()
-        let storageRef = storage.reference()
+        
         
         if lastNameInput.text != "" &&
-           firstNameInput.text != "" &&
-           ageInput.text != "" &&
-           favoriteAlcoholInput.text != ""{
-        
+            firstNameInput.text != "" &&
+            ageInput.text != "" &&
+            favoriteAlcoholInput.text != ""{
+            
             let image = imageView.image
             let picture = image!.pngData()
             let age = Int(ageInput.text ?? "18")
@@ -101,36 +137,41 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             
             var strURL = ""
             
-            let userFromFirebase = Auth.auth().currentUser
-            
-            
-            userImagesRef.putFile(from: photoUrl, metadata: nil, completion: {(metadata, error) in
-                
-                userImagesRef.downloadURL(completion: { (url, error) in
-                    if let urlText = url?.absoluteString {
-                        
-                        strURL = urlText
-                        ref.child("users").child((userFromFirebase?.uid)!).setValue(["age": self.user?.age, "gender": self.user?.gender, "firstname": self.user?.firstname, "lastname": self.user?.lastname, "description": self.user?.description, "favoriteAlcohol": self.user?.favoriteAlcohol, "imageURL": strURL])
-                    }
+            print(photoUrl)
+            if(self.photoChanging == true){
+                userImagesRef.putFile(from: photoUrl, metadata: nil, completion: {(metadata, error) in
+                    
+                    userImagesRef.downloadURL(completion: { (url, error) in
+                        if let urlText = url?.absoluteString {
+                            
+                            strURL = urlText
+                            self.ref.child("users").child((self.firebaseUser?.uid)!).setValue(["age": self.user?.age, "gender": self.user?.gender, "firstname": self.user?.firstname, "lastname": self.user?.lastname, "description": self.user?.description, "favoriteAlcohol": self.user?.favoriteAlcohol, "imageURL": strURL])
+                        }
+                    })
                 })
-            })
-
+            }else{
+                print("pas de changement photo")
+                self.ref.child("users").child((self.firebaseUser?.uid)!).updateChildValues(["age": self.user?.age, "gender": self.user?.gender, "firstname": self.user?.firstname, "lastname": self.user?.lastname, "description": self.user?.description, "favoriteAlcohol": self.user?.favoriteAlcohol])
+                
+            }
+            
+            
         } else{
             print("certain champs sont vide")
         }
     }
     
-
     
-
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

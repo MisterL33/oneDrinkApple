@@ -14,6 +14,7 @@
 		8B111163220C7FC100E8FFDB /* RescueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B111162220C7FC100E8FFDB /* RescueViewController.swift */; };
 		B710DDEE54F019463BF952A7 /* Pods_oneDrinkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE4DFACC509642A71DA0AE3 /* Pods_oneDrinkUITests.framework */; };
 		CD033F2B22048ACC003A94CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD033F2A22048ACC003A94CC /* GoogleService-Info.plist */; };
+		CD22B756223BA4370077B359 /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD22B755223BA4370077B359 /* ProfileEditViewController.swift */; };
 		CD366EA422047C6200789993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD366EA322047C6200789993 /* AppDelegate.swift */; };
 		CD366EA622047C6200789993 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD366EA522047C6200789993 /* RootViewController.swift */; };
 		CD366EA822047C6200789993 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD366EA722047C6200789993 /* DataViewController.swift */; };
@@ -59,6 +60,7 @@
 		B90E514C50AA5041E8404C99 /* Pods-oneDrinkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneDrinkUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oneDrinkUITests/Pods-oneDrinkUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB05C7DBC870A00182F787C3 /* Pods_oneDrinkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oneDrinkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD033F2A22048ACC003A94CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CD22B755223BA4370077B359 /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		CD366EA022047C6200789993 /* oneDrink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oneDrink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD366EA322047C6200789993 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD366EA522047C6200789993 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				8B0A2EC12227F89600FA61EA /* ProfileViewController.swift */,
 				CDED47A72236E31600D9EE34 /* HomeViewController.swift */,
 				CDED47A92236E49900D9EE34 /* RoomViewController.swift */,
+				CD22B755223BA4370077B359 /* ProfileEditViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				8B0A2EC42227F8F700FA61EA /* User.swift in Sources */,
 				8B111163220C7FC100E8FFDB /* RescueViewController.swift in Sources */,
 				8B0A2EC22227F89600FA61EA /* ProfileViewController.swift in Sources */,
+				CD22B756223BA4370077B359 /* ProfileEditViewController.swift in Sources */,
 				CD366EA422047C6200789993 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
